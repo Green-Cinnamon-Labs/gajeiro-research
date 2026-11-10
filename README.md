@@ -50,7 +50,7 @@ Os repositórios de código ficam na organização [Green-Cinnamon-Labs](https:/
 
 ## Material de apoio
 
-- [`referencial/`](referencial/): vault Obsidian com as notas de fonte (`notes/`) e os PDFs (`articles/`, `books/`, `standard/`). Em `new/` ficam os PDFs que ainda não têm nota.
+- [`referencial/`](referencial/): vault Obsidian com as notas de fonte (`notes/`). Os PDFs (`articles/`, `books/`, `standard/` e `new/`, com os que ainda não têm nota) são de terceiros e ficam no repositório privado [`gajeiro-referencial`](https://github.com/Green-Cinnamon-Labs/gajeiro-referencial); aqui essas pastas são ignoradas pelo Git.
   - [`references.bib`](referencial/references.bib): bibliografia única, usada por todos os documentos (`\bibliography{../referencial/references}`).
   - `bibTex/`: o BibTeX de cada fonte, um arquivo por fonte.
 - [`docs/`](docs/):
@@ -61,7 +61,7 @@ Os repositórios de código ficam na organização [Green-Cinnamon-Labs](https:/
   - **Leitura de fontes:** os prompts `doc_prompt_*.md` e as respostas em [`respostas/`](docs/respostas/).
   - **Ícone do projeto:** [`img/gajeiro.png`](docs/img/gajeiro.png).
   - **Diagramas:** [`miscellanea.drawio`](docs/miscellanea.drawio). O mapa geral da monografia está no [README da monografia](tcc-monografia/README.md#big-picture).
-  - **Planta Festo do Ifes:** manuais e exercícios em [`planta-festo-ifes/`](docs/planta-festo-ifes/), para o mestrado.
+  - **Planta Festo do Ifes:** os manuais e exercícios, para o mestrado, ficam no [`gajeiro-referencial`](https://github.com/Green-Cinnamon-Labs/gajeiro-referencial).
 
 ## Como compilar
 
@@ -75,4 +75,4 @@ Os PDFs e arquivos auxiliares não são versionados (ver `.gitignore`). Detalhes
 
 ## Licença
 
-Todos os direitos reservados a Matheus Corteletti Delfino e à Green-Cinnamon-Labs. O repositório é público para leitura, mas o reuso depende de autorização. Material de terceiros e documentos com coautoria têm outros titulares. Ver [`LICENSE`](LICENSE).
+Todos os direitos reservados a Matheus Corteletti Delfino e à Green-Cinnamon-Labs. O repositório é público para leitura, mas o reuso depende de autorização. Documentos com coautoria e material de terceiros têm outros titulares. Ver [`LICENSE`](LICENSE).

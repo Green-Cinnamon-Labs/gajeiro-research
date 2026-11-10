@@ -344,3 +344,10 @@ TSWLatexianTemp*
 main.pdf
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
+
+# Material de terceiros: fica no repositório privado gajeiro-referencial
+referencial/articles/
+referencial/books/
+referencial/standard/
+referencial/new/
+docs/planta-festo-ifes/

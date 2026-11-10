@@ -16,10 +16,8 @@ Exceções:
 
 - Documentos com mais de um autor, como os artigos em paper-ieee/, pertencem
   aos autores listados em cada documento.
-- O material de terceiros continua com os seus titulares: artigos, livros e
-  normas em referencial/, modelos em docs/templates/, manuais em
-  docs/planta-festo-ifes/ e documentos institucionais do Ifes em
-  tcc-monografia/pdf/.
+- O material de terceiros continua com os seus titulares: modelos em
+  docs/templates/ e documentos institucionais do Ifes em tcc-monografia/pdf/.
 
 Registro de datas: o histórico de commits deste repositório, publicado em
 https://github.com/Green-Cinnamon-Labs/gajeiro-research desde 02/06/2026,
