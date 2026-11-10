@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/img/gajeiro.png" alt="Gajeiro" width="180">
+</p>
+
 # gajeiro
 
 Supervisão industrial baseada em Kubernetes.
@@ -55,6 +59,7 @@ Os repositórios de código ficam na organização [Green-Cinnamon-Labs](https:/
   - **Normas resumidas:** [`IEC_62264.md`](docs/IEC_62264.md), [`IEC_62541.md`](docs/IEC_62541.md), [`IEC_63303.md`](docs/IEC_63303.md).
   - **Narrativa da monografia:** [`br_narrativa.md`](docs/br_narrativa.md) e [`br_narrativa_08_10_26.md`](docs/br_narrativa_08_10_26.md).
   - **Leitura de fontes:** os prompts `doc_prompt_*.md` e as respostas em [`respostas/`](docs/respostas/).
+  - **Ícone do projeto:** [`img/gajeiro.png`](docs/img/gajeiro.png).
   - **Diagramas:** [`miscellanea.drawio`](docs/miscellanea.drawio). O mapa geral da monografia está no [README da monografia](tcc-monografia/README.md#big-picture).
   - **Planta Festo do Ifes:** manuais e exercícios em [`planta-festo-ifes/`](docs/planta-festo-ifes/), para o mestrado.
 
@@ -67,3 +72,7 @@ latexmk -pdf main.tex
 ```
 
 Os PDFs e arquivos auxiliares não são versionados (ver `.gitignore`). Detalhes do ambiente em [`docs/doc_setup-latex-monografia.md`](docs/doc_setup-latex-monografia.md).
+
+## Licença
+
+Todos os direitos reservados a Matheus Corteletti Delfino e à Green-Cinnamon-Labs. O repositório é público para leitura, mas o reuso depende de autorização. Material de terceiros e documentos com coautoria têm outros titulares. Ver [`LICENSE`](LICENSE).

@@ -1,0 +1,28 @@
+Copyright (c) 2026 Matheus Corteletti Delfino e Green-Cinnamon-Labs.
+Todos os direitos reservados.
+
+O conteúdo deste repositório (textos, monografia, artigos, notas, figuras,
+diagramas, dados e código) é de autoria de Matheus Corteletti Delfino, salvo
+indicação em contrário, e está protegido pela Lei 9.610/1998.
+
+O repositório é público para leitura. Isso não concede licença de uso. Sem
+autorização por escrito do titular, não é permitido reproduzir, distribuir,
+adaptar ou usar comercialmente este conteúdo, no todo ou em parte. Continuam
+valendo a citação com indicação de autoria e fonte, prevista no art. 46 da
+Lei 9.610/1998, e o que os Termos de Serviço do GitHub permitem a qualquer
+usuário: ver o repositório e fazer fork dele pela plataforma.
+
+Exceções:
+
+- Documentos com mais de um autor, como os artigos em paper-ieee/, pertencem
+  aos autores listados em cada documento.
+- O material de terceiros continua com os seus titulares: artigos, livros e
+  normas em referencial/, modelos em docs/templates/, manuais em
+  docs/planta-festo-ifes/ e documentos institucionais do Ifes em
+  tcc-monografia/pdf/.
+
+Registro de datas: o histórico de commits deste repositório, publicado em
+https://github.com/Green-Cinnamon-Labs/gajeiro-research desde 02/06/2026,
+registra quando cada conteúdo foi criado ou alterado.
+
+Pedidos de autorização: matheus.corteletti.del@gmail.com
