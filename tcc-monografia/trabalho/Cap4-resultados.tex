@@ -19,9 +19,9 @@ As rodadas usaram duas velocidades: 5, em que a planta anda cerca de 10 vezes ma
 	\caption{Rodadas usadas neste capítulo.}
 	\label{tab:rodadas}
 	\scriptsize
-	\begin{tabular}{|>{\raggedright\arraybackslash}p{0.15\textwidth}|c|>{\raggedright\arraybackslash}p{0.14\textwidth}|c|c|c|c|>{\raggedright\arraybackslash}p{0.12\textwidth}|}
+	\begin{tabular}{>{\raggedright\arraybackslash}p{0.15\textwidth}c>{\raggedright\arraybackslash}p{0.14\textwidth}cccc>{\raggedright\arraybackslash}p{0.12\textwidth}}
 		\hline
-		\textbf{Rodada} & \textbf{Data} & \textbf{Versão} & \textbf{Malhas} & \textbf{Veloc.} & \cabecalho{\textbf{Tempo}\\\textbf{simulado (h)}} & \textbf{Aval.} & \textbf{Distúrbio} \\
+		\multicolumn{1}{c|}{\textbf{Rodada}} & \multicolumn{1}{c|}{\textbf{Data}} & \multicolumn{1}{c|}{\textbf{Versão}} & \multicolumn{1}{c|}{\textbf{Malhas}} & \multicolumn{1}{c|}{\textbf{Veloc.}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Tempo}\\\textbf{simulado (h)}}} & \multicolumn{1}{c|}{\textbf{Aval.}} & \multicolumn{1}{c}{\textbf{Distúrbio}} \\
 		\hline
 		Calibração & 08/10 & 2.0.0 & P & 5 & 1,75 a 5,06 & 41 & nenhum \\
 		Experimento 25 & 08/10 & 2.0.0 & P & 5 & 1,39 a 4,93 & 44 & IDV(6) de 2,31 a 3,84~h \\
@@ -53,9 +53,9 @@ As derivadas ficaram perto de zero: no máximo $5{,}3\times10^{-6}$ fora do reat
 	\caption{Algumas medições da planta no caso base, comparadas com a Tabela~2 de Ricker (1995).}
 	\label{tab:xmeas_caso_base}
 	\footnotesize
-	\begin{tabular}{|l|c|c|}
+	\begin{tabular}{lcc}
 		\hline
-		\textbf{Medição} & \textbf{Planta} & \textbf{Ricker (1995)} \\
+		\multicolumn{1}{c|}{\textbf{Medição}} & \multicolumn{1}{c|}{\textbf{Planta}} & \multicolumn{1}{c}{\textbf{Ricker (1995)}} \\
 		\hline
 		Pressão do reator (kPa) & 2705,000 & 2705 \\
 		Nível do reator (\%) & 75,000 & 75 \\
@@ -76,15 +76,14 @@ As derivadas ficaram perto de zero: no máximo $5{,}3\times10^{-6}$ fora do reat
 	\caption{Custo da planta no caso base, por parcela, comparado com a Tabela~4 de Ricker (1995).}
 	\label{tab:custo_caso_base}
 	\footnotesize
-	\begin{tabular}{|l|c|c|}
+	\begin{tabular}{lcc}
 		\hline
-		\textbf{Parcela (\$/h)} & \textbf{Planta} & \textbf{Ricker (1995)} \\
+		\multicolumn{1}{c|}{\textbf{Parcela (\$/h)}} & \multicolumn{1}{c|}{\textbf{Planta}} & \multicolumn{1}{c}{\textbf{Ricker (1995)}} \\
 		\hline
 		Purga & 114,730 & 114,71 \\
 		Produto & 30,271 & 30,28 \\
 		Compressor & 18,301 & 18,30 \\
 		Vapor & 7,324 & 7,32 \\
-		\hline
 		Total & 170,626 & 170,61 \\
 		\hline
 	\end{tabular}
@@ -101,15 +100,14 @@ O segundo teste usa o \texttt{tep-optimizer}, o trabalho paralelo citado na Seç
 	\caption{Custo no ótimo do Modo~1, por parcela, comparado com Ricker (1995).}
 	\label{tab:otimo}
 	\footnotesize
-	\begin{tabular}{|l|c|c|}
+	\begin{tabular}{lcc}
 		\hline
-		\textbf{Parcela (\$/h)} & \textbf{\texttt{tep-optimizer}} & \textbf{Ricker (1995)} \\
+		\multicolumn{1}{c|}{\textbf{Parcela (\$/h)}} & \multicolumn{1}{c|}{\textbf{\texttt{tep-optimizer}}} & \multicolumn{1}{c}{\textbf{Ricker (1995)}} \\
 		\hline
 		Purga & 73,76 & 73,75 \\
 		Produto & 25,46 & 25,46 \\
 		Compressor & 14,95 & 14,95 \\
 		Vapor & 0,15 & 0,15 \\
-		\hline
 		Total & 114,32 & 114,31 \\
 		\hline
 	\end{tabular}
@@ -128,9 +126,9 @@ Os dois testes acima não envolvem tempo nem controle. Em operação, a planta p
 	\caption{A planta com as malhas proporcionais, sem distúrbio, na rodada de controle do Experimento~27.}
 	\label{tab:controle_p}
 	\footnotesize
-	\begin{tabular}{|c|c|c|c|c|c|}
+	\begin{tabular}{cccccc}
 		\hline
-		\textbf{$t$ (h)} & \cabecalho{\textbf{Purga}\\\textbf{(\%)}} & \cabecalho{\textbf{Pressão}\\\textbf{(kPa)}} & \cabecalho{\textbf{Nível do}\\\textbf{reator (\%)}} & \cabecalho{\textbf{B na purga}\\\textbf{(\% mol)}} & \cabecalho{\textbf{$J$}\\\textbf{(\$/h)}} \\
+		\multicolumn{1}{c|}{\textbf{$t$ (h)}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Purga}\\\textbf{(\%)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Pressão}\\\textbf{(kPa)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Nível do}\\\textbf{reator (\%)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{B na purga}\\\textbf{(\% mol)}}} & \multicolumn{1}{c}{\cabecalho{\textbf{$J$}\\\textbf{(\$/h)}}} \\
 		\hline
 		0,4 & 39,1 & 2695,2 & 71,6 & 14,37 & 166,3 \\
 		5 & 39,3 & 2697,1 & 72,1 & 14,31 & 167,1 \\
@@ -176,9 +174,9 @@ O distúrbio escolhido foi o IDV(6), a perda da alimentação de A, um dos cinco
 	\caption{Eventos nas rodadas com o IDV(6), contados a partir do instante em que o distúrbio foi ligado.}
 	\label{tab:idv6}
 	\footnotesize
-	\begin{tabular}{|>{\raggedright\arraybackslash}p{0.5\textwidth}|c|c|}
+	\begin{tabular}{>{\raggedright\arraybackslash}p{0.5\textwidth}cc}
 		\hline
-		\textbf{Evento} & \textbf{Experimento 25} & \textbf{Experimento 26} \\
+		\multicolumn{1}{c|}{\textbf{Evento}} & \multicolumn{1}{c|}{\textbf{Experimento 25}} & \multicolumn{1}{c}{\textbf{Experimento 26}} \\
 		\hline
 		Níveis do separador e do \textit{stripper} passam do \textit{offset} máximo & sem o critério & +0,84~h \\
 		\texttt{TargetsMet} False (vazão de produto abaixo da meta) & +0,98~h & +0,94~h \\
@@ -242,9 +240,9 @@ A rodada 2, mais longa, mostrou o porquê (Tabela~\ref{tab:exp27} e Figura~\ref{
 	\caption{A planta com as malhas PI, sem distúrbio, na rodada 2 do Experimento~27.}
 	\label{tab:exp27}
 	\scriptsize
-	\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\begin{tabular}{cccccccc}
 		\hline
-		\textbf{$t$ (h)} & \cabecalho{\textbf{Purga}\\\textbf{(\%)}} & \cabecalho{\textbf{Pressão}\\\textbf{(kPa)}} & \cabecalho{\textbf{Nível do}\\\textbf{reator (\%)}} & \cabecalho{\textbf{B na purga}\\\textbf{(\% mol)}} & \cabecalho{\textbf{T do}\\\textbf{reator (°C)}} & \cabecalho{\textbf{Produto}\\\textbf{(m$^3$/h)}} & \cabecalho{\textbf{$J$}\\\textbf{(\$/h)}} \\
+		\multicolumn{1}{c|}{\textbf{$t$ (h)}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Purga}\\\textbf{(\%)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Pressão}\\\textbf{(kPa)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Nível do}\\\textbf{reator (\%)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{B na purga}\\\textbf{(\% mol)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{T do}\\\textbf{reator (°C)}}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Produto}\\\textbf{(m$^3$/h)}}} & \multicolumn{1}{c}{\cabecalho{\textbf{$J$}\\\textbf{(\$/h)}}} \\
 		\hline
 		0,4 & 38,7 & 2695,3 & 71,6 & 14,37 & 120,44 & 22,98 & 165,9 \\
 		10 & 33,8 & 2703,1 & 69,5 & 14,95 & 120,46 & 23,10 & 152,1 \\
@@ -295,9 +293,9 @@ A Seção~\ref{subsec:indice_malhas} mostrou que o código calcula o índice na 
 	\caption{Julgamento das malhas refeito na escala do artigo, comparado com o que o supervisor fez.}
 	\label{tab:releitura}
 	\footnotesize
-	\begin{tabular}{|>{\raggedright\arraybackslash}p{0.27\textwidth}|>{\raggedright\arraybackslash}p{0.17\textwidth}|c|>{\raggedright\arraybackslash}p{0.27\textwidth}|}
+	\begin{tabular}{>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.17\textwidth}c>{\raggedright\arraybackslash}p{0.27\textwidth}}
 		\hline
-		\textbf{Rodada} & \textbf{Primeiro alarme} & \cabecalho{\textbf{Avaliações}\\\textbf{com alarme}} & \textbf{O que o supervisor fez} \\
+		\multicolumn{1}{c|}{\textbf{Rodada}} & \multicolumn{1}{c|}{\textbf{Primeiro alarme}} & \multicolumn{1}{c|}{\cabecalho{\textbf{Avaliações}\\\textbf{com alarme}}} & \multicolumn{1}{c}{\textbf{O que o supervisor fez}} \\
 		\hline
 		Calibração (P, velocidade 5) & nenhum & 0~\% & nenhum alarme \\
 		Experimento 25 (P, velocidade 5, IDV(6)) & 2,86~h (+0,55~h) & 59~\% & malhas nunca sinalizadas; \texttt{NonCompliant} em +1,15~h \\

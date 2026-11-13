@@ -267,15 +267,14 @@ A Figura~\ref{fig:uaexpert} mostra o que um cliente OPC~UA enxerga. No UaExpert 
 	\caption{Situação dos distúrbios de Downs e Vogel no \texttt{tep-plant}.}
 	\label{tab:idvs}
 	\footnotesize
-	\begin{tabular}{|c|>{\raggedright\arraybackslash}p{0.42\textwidth}|>{\raggedright\arraybackslash}p{0.36\textwidth}|}
+	\begin{tabular}{c>{\raggedright\arraybackslash}p{0.42\textwidth}>{\raggedright\arraybackslash}p{0.36\textwidth}}
 		\hline
-		\textbf{IDV} & \textbf{O que muda} & \textbf{Situação} \\
+		\multicolumn{1}{c|}{\textbf{IDV}} & \multicolumn{1}{c|}{\textbf{O que muda}} & \multicolumn{1}{c}{\textbf{Situação}} \\
 		\hline
 		1, 2 & composição da alimentação 4 (razão A/C; teor de B), em degrau & implementados \\
 		3 & temperatura da alimentação de D, em degrau & implementado \\
 		6 & perda da alimentação de A, em degrau & implementado \\
 		7 & pressão do cabeçalho de C, em degrau & implementado \\
-		\hline
 		4, 5 & temperatura de entrada da água de resfriamento, em degrau & sem efeito: a temperatura de saída da água é constante nesta versão \\
 		8 a 13 & composições, temperaturas e cinética, aleatórios ou em deriva lenta & falta um gerador de sinal aleatório \\
 		14, 15, 19 & válvulas travadas: as de água de resfriamento (14, 15) e as XMV 5, 7, 8 e 9 (19, desconhecido no artigo) & falta o mecanismo no atuador \\
@@ -378,9 +377,9 @@ A Tabela~\ref{tab:linhas} compara o tamanho das duas implementações, contando 
 	\caption{Linhas de código no FORTRAN original e no \texttt{tep-plant}.}
 	\label{tab:linhas}
 	\footnotesize
-	\begin{tabular}{|>{\raggedright\arraybackslash}p{0.40\textwidth}|>{\raggedright\arraybackslash}p{0.24\textwidth}|>{\raggedright\arraybackslash}p{0.24\textwidth}|}
+	\begin{tabular}{>{\raggedright\arraybackslash}p{0.40\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}}
 		\hline
-		\textbf{Parte} & \textbf{FORTRAN} & \textbf{\texttt{tep-plant}} \\
+		\multicolumn{1}{c|}{\textbf{Parte}} & \multicolumn{1}{c|}{\textbf{FORTRAN}} & \multicolumn{1}{c}{\textbf{\texttt{tep-plant}}} \\
 		\hline
 		Programa principal & 27 (\texttt{temain.f}) & 6 (\texttt{main.rs}) \\
 		Declarações no início da \texttt{TEFUNC} (blocos \texttt{COMMON} e variáveis) & 130 & nenhuma \\
@@ -527,9 +526,9 @@ O contrato entre o \textit{historian} e o supervisor é a API da Tabela~\ref{tab
 	\caption{Rotas da API do \textit{historian}.}
 	\label{tab:api_historian}
 	\footnotesize
-	\begin{tabular}{|c|l|p{0.5\textwidth}|}
+	\begin{tabular}{clp{0.5\textwidth}}
 		\hline
-		\textbf{Método} & \textbf{Rota} & \textbf{O que devolve} \\
+		\multicolumn{1}{c|}{\textbf{Método}} & \multicolumn{1}{c|}{\textbf{Rota}} & \multicolumn{1}{c}{\textbf{O que devolve}} \\
 		\hline
 		GET & \texttt{/healthz} & estado da coleta: se está conectada, o instante da última amostra, o último erro e o número de séries \\
 		GET & \texttt{/signals} & as chaves disponíveis \\

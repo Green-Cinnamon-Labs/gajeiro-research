@@ -7,15 +7,15 @@ No reator e no separador, os componentes A, B e C, que não condensam, são guar
 
 \begingroup
 \small
-\begin{longtable}{|c|l|>{\raggedright\arraybackslash}p{4.3cm}|>{\raggedright\arraybackslash}p{6.0cm}|}
+\begin{longtable}{cl>{\raggedright\arraybackslash}p{4.3cm}>{\raggedright\arraybackslash}p{6.0cm}}
 	\caption{Variáveis de estado do modelo do TEP e chaves correspondentes no \texttt{tep-plant}.}
 	\label{tab:estados_tep} \\
 	\hline
-	\textbf{Estado} & \textbf{FORTRAN} & \textbf{Descrição} & \textbf{Chave no \texttt{tep-plant}} \\
+	\multicolumn{1}{c|}{\textbf{Estado}} & \multicolumn{1}{c|}{\textbf{FORTRAN}} & \multicolumn{1}{c|}{\textbf{Descrição}} & \multicolumn{1}{c}{\textbf{Chave no \texttt{tep-plant}}} \\
 	\hline
 	\endfirsthead
 	\hline
-	\textbf{Estado} & \textbf{FORTRAN} & \textbf{Descrição} & \textbf{Chave no \texttt{tep-plant}} \\
+	\multicolumn{1}{c|}{\textbf{Estado}} & \multicolumn{1}{c|}{\textbf{FORTRAN}} & \multicolumn{1}{c|}{\textbf{Descrição}} & \multicolumn{1}{c}{\textbf{Chave no \texttt{tep-plant}}} \\
 	\hline
 	\endhead
 	\hline
@@ -23,20 +23,15 @@ No reator e no separador, os componentes A, B e C, que não condensam, são guar
 	1--3   & \texttt{UCVR(1--3)} & Quantidade de A, B e C no vapor do reator (kmol) & \texttt{reactor.\allowbreak{}state.\allowbreak{}vapor\_a} a \texttt{vapor\_c} \\
 	4--8   & \texttt{UCLR(4--8)} & Quantidade de D a H no líquido do reator (kmol) & \texttt{reactor.\allowbreak{}state.\allowbreak{}liquid\_d} a \texttt{liquid\_h} \\
 	9      & \texttt{ETR}        & Energia interna do reator & \texttt{reactor.\allowbreak{}state.\allowbreak{}enthalpy} \\
-	\hline
 	10--12 & \texttt{UCVS(1--3)} & Quantidade de A, B e C no vapor do separador (kmol) & \texttt{separator.\allowbreak{}state.\allowbreak{}vapor\_a} a \texttt{vapor\_c} \\
 	13--17 & \texttt{UCLS(4--8)} & Quantidade de D a H no líquido do separador (kmol) & \texttt{separator.\allowbreak{}state.\allowbreak{}liquid\_d} a \texttt{liquid\_h} \\
 	18     & \texttt{ETS}        & Energia interna do separador & \texttt{separator.\allowbreak{}state.\allowbreak{}enthalpy} \\
-	\hline
 	19--26 & \texttt{UCLC(1--8)} & Quantidade de A a H no líquido do \textit{stripper} (kmol) & \texttt{stripper.\allowbreak{}state.\allowbreak{}0} a \texttt{7} \\
 	27     & \texttt{ETC}        & Energia interna do \textit{stripper} & \texttt{stripper.\allowbreak{}state.\allowbreak{}8} \\
-	\hline
 	28--35 & \texttt{UCVV(1--8)} & Quantidade de A a H no vapor do vaso do compressor (kmol) & \texttt{compressor.\allowbreak{}state.\allowbreak{}0} a \texttt{7} \\
 	36     & \texttt{ETV}        & Energia interna do vaso do compressor & \texttt{compressor.\allowbreak{}state.\allowbreak{}8} \\
-	\hline
 	37     & \texttt{TWR}        & Temperatura de saída da água de resfriamento do reator (°C) & constante: \texttt{heat.\allowbreak{}reactor\_cooling\_water\_return} \\
 	38     & \texttt{TWS}        & Temperatura de saída da água de resfriamento do condensador (°C) & constante: \texttt{heat.\allowbreak{}separator\_cooling\_water\_return} \\
-	\hline
 	39     & \texttt{VPOS(1)}    & Válvula de alimentação de D, XMV$_1$ (\%) & \texttt{valve.\allowbreak{}feed\_d.\allowbreak{}position} \\
 	40     & \texttt{VPOS(2)}    & Válvula de alimentação de E, XMV$_2$ (\%) & \texttt{valve.\allowbreak{}feed\_e.\allowbreak{}position} \\
 	41     & \texttt{VPOS(3)}    & Válvula de alimentação de A, XMV$_3$ (\%) & \texttt{valve.\allowbreak{}feed\_a.\allowbreak{}position} \\

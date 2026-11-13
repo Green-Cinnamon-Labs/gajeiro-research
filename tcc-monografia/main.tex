@@ -54,6 +54,17 @@
 
 \setlength{\abovecaptionskip}{5pt} % espaçamento antes da legenda de tabelas/figuras
 
+% Pedidos da biblioteca do Ifes (nov. 2026):
+% seções secundárias (1.1, 2.2...) em maiúsculas, sem negrito, no texto e no sumário
+\setboolean{ABNTEXuppersection}{true}
+\let\addcontentslineoriginal\addcontentsline
+\renewcommand{\addcontentsline}[3]{%
+  \ifthenelse{\equal{#2}{section}}%
+    {\addcontentslineoriginal{#1}{#2}{\protect\MakeTextUppercase{#3}}}%
+    {\addcontentslineoriginal{#1}{#2}{#3}}}
+% notas de rodapé numeradas em sequência no trabalho todo, sem recomeçar a cada capítulo
+\counterwithout{footnote}{chapter}
+
 
 
 %%% Define que todos os códigos fontes construídos com o ambiente
@@ -291,7 +302,11 @@
 %%% Lista de códigos
 \renewcommand{\lstlistlistingname}{LISTA DE CÓDIGOS}
 \pdfbookmark[0]{\lstlistlistingname}{lol}
+% fora do sumário, como as outras listas: o sumário só lista o que vem depois dele
+\begingroup
+\renewcommand{\addcontentsline}[3]{}
 \lstlistoflistings
+\endgroup
 \cleardoublepage
 
 
@@ -418,7 +433,9 @@
 % Referências bibliográficas
 % ----------------------------------------------------------
 \renewcommand{\bibname}{REFERÊNCIAS}
-\bibliography{../referencial/references}
+% citações com o autor em minúsculas e inicial maiúscula: (Larsson; Skogestad, 2000)
+\citeoption{abnt-opcoes-tcc}
+\bibliography{../referencial/references,abnt-opcoes}
 
 % ----------------------------------------------------------
 % Glossário
